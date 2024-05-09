@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 int splashIndex=0;
 
 class SplashVM {
+
+  //* List of Splsh Frames
   static List<Widget> frames=[
     const Frame1(),
     const Frame2(),
@@ -16,8 +18,9 @@ class SplashVM {
     const Frame5(),
   ];
 
-  
-  void runSplashFrames(){
+   
+  static void runSplashFrames(){
+   //* To Animate Splash Screen Frame by Frame With 200 milliseconds between each frame.
     splashIndex = 0;
     for(splashIndex ; splashIndex <= frames.length;splashIndex++){
       Future.delayed(const Duration(milliseconds: 200));
