@@ -11,6 +11,11 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    SplashVM.runSplashFrames();
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     return SplashVM.frames[splashIndex];
   }
